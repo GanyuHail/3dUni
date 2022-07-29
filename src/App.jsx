@@ -48,8 +48,8 @@ function App() {
       pointer.y = - (event.clientY / window.innerHeight) * 2 + 1;
     }
     const animate = () => {
-      sphere.rotation.x += 0.001;
-      sphere.rotation.y += 0.001;
+      sphereGeometry.rotation.x += 0.001;
+      sphereGeometry.rotation.y += 0.001;
       controls.update();
       renderer.render(scene, camera);
       window.requestAnimationFrame(animate);
