@@ -35,6 +35,7 @@ function App() {
     spotLight.position.set(0, 64, 32);
     scene.add(spotLight);
 
+<<<<<<< HEAD
     const sphere = new THREE.Mesh(
       new THREE.SphereGeometry(12, 64, 32),
       new THREE.ShaderMaterial({
@@ -62,6 +63,13 @@ function App() {
 
     atmosphere.scale.set(1.1, 1.1, 1.1)
     scene.add(atmosphere);
+=======
+    const sphereGeometry = new THREE.SphereGeometry(12, 64, 32);
+    const sphereTexture = new THREE.TextureLoader().load( 'https://raw.githubusercontent.com/GanyuHail/3dUni/af0410ab94f43f47c605838cd9db4d380639afb7/src/assets/uni.jpg' );
+    const sphereMaterial = new THREE.MeshBasicMaterial( { map: sphereTexture } );
+    const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
+    scene.add(sphereMesh);
+>>>>>>> parent of 9c31ae7 (change to equirectangular image on sphere)
 
     const controls = new OrbitControls(camera, renderer.domElement);
 
